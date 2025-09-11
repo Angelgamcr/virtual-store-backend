@@ -63,10 +63,9 @@ export class ProductsService {
     const {
       limit = 10,
       offset = 0,
-      gender = '',
+      category = '',
       minPrice,
       maxPrice,
-      sizes,
       q: query,
     } = paginationDto;
 

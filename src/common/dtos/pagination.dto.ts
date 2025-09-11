@@ -29,7 +29,7 @@ export class PaginationDto {
     example: 'men',
   })
   @IsOptional()
-  gender?: 'men' | 'women' | 'unisex' | 'kid' | '';
+  category?: 'Jugos Naturales' | 'Queso' | '';
 
   @ApiProperty({
     required: false,
@@ -50,16 +50,6 @@ export class PaginationDto {
   @Min(0)
   @Type(() => Number)
   maxPrice?: number;
-
-  @ApiProperty({
-    required: false,
-    description: 'Filtrar resultados por tallas. Ejemplo: "XS,S,M"',
-    isArray: false,
-    example: 'XS,S,M',
-  })
-  @IsOptional()
-  @Type(() => String)
-  sizes?: string;
 
   @ApiProperty({
     required: false,

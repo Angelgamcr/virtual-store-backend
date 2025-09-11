@@ -26,6 +26,7 @@ export class FilesController {
     private readonly configService: ConfigService,
   ) {}
 
+  // Obtiene la imagen del producto
   @Get('product/:imageName')
   findProductImage(
     @Res() res: Response,
@@ -36,6 +37,7 @@ export class FilesController {
     res.sendFile(path);
   }
 
+  // Guarda la imagen del producto
   @Post('product')
   @UseInterceptors(
     FileInterceptor('file', {
